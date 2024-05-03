@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // length < 4 -> weak pwd : strong pwd 
+        // pwd = 1234 -> length = 4; pwd = 98242 -> length = 5
+
+        let pwd = parseInt(prompt('Enter password : '))
+        // -1234 -> -1 * -1234 = 1234 
+        // 1234 -> 1234 
+        
+        // if (pwd <= -999) {
+        //     alert('Strong pwd ')
+        // } else {
+        //     alert('weak pwd ')
+        // }
+
+        if (pwd <= 0) {
+            pwd *= -1 // pwd = pwd * (-1)
+        }
+
+        if (pwd <= 999) {
+            alert('weak pwd ')  
+        } else {
+            alert('Strong pwd ')
+        }
+
+    </script>
+</body>
+</html>
