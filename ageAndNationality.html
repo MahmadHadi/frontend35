@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let age = parseInt(prompt("Enter age : "));
+            let nationality = confirm("Are you Indian ? "); // t / f
+
+            if (age <= 0) {
+                document.write(`<h1 style="color: red">Invalid input </h1>`);
+            } else {
+                if (age >= 19 && nationality) {
+                    document.write(`<h1>You can vote </h1>`);
+                } else {
+                    document.write(`<h1>You can not vote </h1>`);
+                }
+            }
+        </script>
+    </body>
+</html>
