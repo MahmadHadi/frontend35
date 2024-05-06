@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let ch = prompt("Enter a character : ");
+            // 'A'.toLocaleLowerCase()
+            // a e i o u
+            // ch = ch.toLowerCase()
+            // switch (ch) {
+            switch (ch.toLowerCase()) {
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                    document.write(`<h1> ${ch} is an vowel </h1>`);
+                    break;
+                default:
+                    document.write(`<h1> ${ch} is an consonant </h1>`);
+                    break;
+            }
+            
+            // document.write(`${"a".toLowerCase()}`);
+
+            if (
+                ch.toLowerCase() == "a" ||
+                ch == "e" ||
+                ch == "i" ||
+                ch == "o" ||
+                ch == "u"
+            ) {
+                document.write(`<h1> ${ch} is an vowel </h1>`);
+            } 
+            else {
+                document.write(`<h1> ${ch} is an consonant </h1>`);
+            }
+        </script>
+    </body>
+</html>
