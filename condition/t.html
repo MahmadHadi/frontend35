@@ -1,0 +1,25 @@
+<script>
+    let num1 = parseInt(prompt("Enter number 1 : "));
+    let num2 = parseInt(prompt("Enter number 2 : "));
+    let symbol = prompt("Enter Two Degit Oparetion symbol :+ , - , * , / , % ");
+    let ans;
+    if (symbol === "+") {
+        ans = num1 + num2;
+        
+    } else if (symbol === "-") {
+        ans = num1 - num2;
+        
+    } else if (symbol === "*") {
+        ans = num1 * num2;
+        
+    } else if (symbol === "/") {
+        ans = num1 / num2;
+        
+    } else if (symbol === "%") {
+        ans = num1 % num2;
+        
+    } else {
+        alert("invelid symbol");
+    }
+    alert(ans);
+</script>

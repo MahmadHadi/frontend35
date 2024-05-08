@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .invalid {
+                color: red;
+            }
+        </style>
+        <script>
+            let num1 = parseInt(prompt("Enter number 1 : "));
+            let num2 = parseInt(prompt("Enter number 2 : "));
+            let oper = prompt("Enter operator : ");
+
+            // if (oper == "+") {
+            //     document.write(`<h1> Addition = ${num1 + num2} </h1>`);
+            // } else {
+            //     if (oper == "-") {
+            //         document.write(`<h1> Subtraction = ${num1 - num2} </h1>`);
+            //     } else {
+            //         if (oper == '*') {
+            //             document.write(`<h1> Subtraction = ${num1 * num2} </h1>`);
+            //         } else {
+            //             if (oper == '/') {
+            //                 document.write(`<h1> Subtraction = ${num1 / num2} </h1>`);
+            //             } else {
+            //                 document.write(`<h1>Invalid input </h1>`);
+            //             }
+            //         }
+            //     }
+            // }
+            let sum = num1 + num2;
+            oper == "+"
+                ? document.write(
+                      `<h1> ${sum} = ${num1} + ${num2} = ${num1 + num2} </h1>`
+                  )
+                : oper == "-"
+                ? document.write(`<h1> Subtraction = ${num1 - num2} </h1>`)
+                : oper == "*"
+                ? document.write(`<h1> Product = ${num1 * num2} </h1>`)
+                : oper == "/"
+                ? document.write(`<h1> Division = ${num1 / num2} </h1>`)
+                : document.write(`<h1 class="invalid">Invalid input </h1>`);
+
+        </script>
+    </body>
+</html>
