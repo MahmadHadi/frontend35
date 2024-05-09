@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(`<h1> ${'1' === 1} </h1>`)
+        document.write(`<h1> ${parseInt(undefined)} </h1>`)
+        document.write(`<h1> ${NaN == NaN} </h1>`)
+        document.write(`<h1> null == undefined ${null === undefined} </h1>`)
+        document.write(`<h1> undefined == undefined ${undefined == undefined} </h1>`)
+        document.write(`<h1> undefined ${parseInt(undefined)} null == ${parseInt(null)} </h1>`)
+        document.write(`<h1> ${typeof undefined} </h1>`)
+        let a = null
+        document.write(`<h1> ${a == null} </h1>`)
+
+
+        let age = 0
+        let msg = age <= 0 ? 'invalid input 1 '
+        : age < 3 ? 'asfasdf  baby ' 
+        : age < 18 ? 'hello teenager '
+        : age < 100 ? 'greetings ' 
+        : 'invalid input '
+
+        // if (age < 3) {
+        //     msg = 'hello baby'
+        // } else {
+        //     if (age < 18) {
+        //         msg = 'hello teen '
+        //     }
+        // }
+        document.write(`<h1> ${msg} </h1>`)
+
+    </script>
+</body>
+</html>
+
+<!-- a -> 97 -> 110 0001  -->
+<!-- A - 67 -> 100 0011 -->
+<!-- ascii  -->
