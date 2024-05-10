@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type = 'text'] {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1" class="h1class">
+        Lorem, ipsum.
+    </h1>
+    <input type="text"  name="text">
+    <input type="submit" value="btn1" class="hadi" autofocus>
+    
+    <script>
+        console.log(document.getElementsByTagName('h1'))
+        console.log(document.querySelector('[autofocus]'))
+        let h1 = document.querySelector('h1')
+        h1.style.background = 'aqua'
+        document.querySelector('h1').style.border = '10px solid red'   
+    </script>
+</body>
+</html>
