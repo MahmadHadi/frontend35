@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fs-3rem {
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+.flex-full {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    width: 100%;
+    padding: 10rem;
+}
+.container > div {
+    border-top: 1px solid;
+    padding: 1rem 3.5rem;
+
+    transition: all .3s ease;
+}
+.lh-high {
+    line-height: 4rem;
+}
+.p-rel {
+    position: relative;
+}
+.work-img {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    height: 2000px;
+}
+
+.work1-img,
+.work2-img,
+.work3-img,
+.work4-img {
+    display: none;
+}
+
+
+.work-img > img {
+    height: 10%;
+    width: auto;
+}

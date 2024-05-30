@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit.html" method="post" target="_blank" onsubmit="return isValid();">
+        <p>
+            <label for="name">Name : </label>
+            <input type="text" name="name" id="name">
+        </p>
+        
+        <p>
+            <label for="pwd">Password : </label>
+            <input type="password" name="pwd" id="pwd">
+        </p>
+
+        <p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit ">
+        </p>
+    </form>
+    <h1 id="InvalidMsg"></h1>
+
+    <script>
+        let isValid = function() {
+            let name = document.querySelector("#name").value;
+            let pwd = document.querySelector("#pwd").value;
+            const userName = "hadi";
+            const userPwd = "hadi1214";
+            if (name === userName && pwd === userPwd) {
+                return true;
+            } else {
+                document.querySelector("#InvalidMsg").innerHTML = "Invalid input ";
+                return false;
+            }   
+        }
+    </script>
+</body>
+</html>
+
+<!-- file:///D:/batch/web-batch/frontend35/dom/submit.html?name=hadi&pwd=hadi1214 -->
