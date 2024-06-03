@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let name = "hadsf ";
+        let obj1 = {
+            name: "hadi nayani ",
+            rnum: 30,
+            leng: "js",
+            printDets: function(name2) {
+                console.log(this.leng, name2, this.name, this.rnum)
+            },
+            1: 10,
+        }
+        console.log(obj1);
+        console.log(obj1.leng);
+        obj1.printDets(23)
+        console.log(obj1["rnum"])
+        console.log(obj1[1])
+    </script>
+</body>
+</html>
