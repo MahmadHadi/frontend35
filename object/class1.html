@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student {
+            constructor(name, rnum) {
+                this.name = name;
+                this.rnum = rnum;
+            }
+            
+            print = function() {
+                console.log(this.name, this.rnum);
+            }
+        }
+        let hadi = new Student("hadi ", 12);
+        console.log(hadi.name)
+        console.log(hadi.rnum)
+        console.log(hadi.print)
+
+        let nayani = new Student("nayani hadi ", 21)
+        nayani.print()
+    </script>
+</body>
+</html>
