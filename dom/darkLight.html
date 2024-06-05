@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="h1">
+        Light Mode
+    </div>
+    <div class="img">
+        <svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="sun" d="M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0" fill="yellow"/>
+        </svg>
+    </div>        
+    
+    <script>
+        let sun = document.querySelector(".sun")
+        let img = document.querySelector(".img")
+        let h1 = document.querySelector(".h1")
+        let toggle = true; // light -> true, dark -> false 
+
+        img.addEventListener("click", () => {
+            toggle = !toggle;
+            h1.innerHTML = "Dark Mode "
+        })
+    </script>
+</body>
+</html>
+
+<!-- * sun -->
+<!-- <svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0" fill="yellow"/>
+</svg> -->
+
+<!-- * moon -->
+<!-- <svg width="56" height="111" viewBox="0 0 56 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M25 55.5C25 86.1518 55.5 111 55.5 111C24.8482 111 -7.62939e-06 86.1518 -7.62939e-06 55.5C-7.62939e-06 24.8482 24.8482 0 55.5 0C55.5 0 25 24.8482 25 55.5Z" fill="#333"/>
+</svg> -->
+    
+    
+    
+ 

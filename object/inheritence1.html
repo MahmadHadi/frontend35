@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let userName = prompt("Enter your name : ")
+        class Person {
+            constructor(name) {
+                this.name = name
+            }
+            talk() {
+                console.log(`${this.name} can talk `);
+            }
+        }
+        class Student extends Person {
+            constructor(name, std) {
+                super(name);
+                this.std = std;
+            }
+            sub() {
+                console.log(`${this.name} study in ${this.std}`);
+            }
+        }
+        let student1 = new Student("hadi ", 10);
+        student1.talk();
+        student1.sub();
+
+        let student2 = new Student("nayani hadi ", 12);
+        student2.sub()
+        student2.talk()
+
+        let person1 = new Person("nayani ")
+        person1.talk()
+        // person1.sub()
+
+        let student3 = new Student(userName, 11)
+        student3.talk()
+        student3.sub()
+        </script>
+</body>
+</html>

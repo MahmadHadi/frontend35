@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- * PI * r * r  -->
+    <script>
+        class Square {
+            constructor(num) {
+                this.num = num
+            }
+            getSquare() {
+                return this.num * this.num;
+            }
+        }
+        class AreaOfCircl extends Square {
+            constructor(raduis) {
+                super(raduis)
+                this.sq = super.getSquare()
+            }
+            getArea() {
+                return 3.1415 * this.sq;
+            }
+        }
+
+        let ans1 = new AreaOfCircl(10)
+        console.log(ans1.getArea())
+
+    </script>
+</body>
+</html>
