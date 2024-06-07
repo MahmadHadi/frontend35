@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- * area of circle and area of square  -->
+    <script>
+        class Sq {
+            constructor(num) {
+                this.num = num;
+            }
+            getSquare() {
+                return this.num * this.num;
+            }
+        }
+        class Square extends Sq {
+            constructor(side) {
+                super(side)
+                this.square =  super.getSquare();
+            }
+            getAreaOfSquare() {
+                return this.square;
+            }
+        }
+        class Circle extends Sq {
+            constructor(radius) {
+                super(radius);
+                this.square = super.getSquare();
+            }
+            getAreaOfCircle() {
+                return 3.1415 * this.square;
+            }
+        }
+
+        let circl1 = new Circle(10);
+        console.log(circl1.getAreaOfCircle());
+
+        let square1 = new Square(10);
+        console.log(square1.getSquare());
+    </script>
+</body>
+</html>

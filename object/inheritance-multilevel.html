@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- * A = 2 * π * r * h + 2 * (π * r * r) -->
+        <script>
+            class Square {
+                constructor(num) {
+                    this.num = num;
+                }
+                getSquare() {
+                    return this.num * this.num;
+                }
+            }
+            class AreaOfCircle extends Square {
+                constructor(raduis) {
+                    super(raduis);
+                    this.sq = super.getSquare();
+                }
+                getArea() {
+                    return 3.1415 * this.sq;
+                }
+            }
+            class AreaOfCylinder extends AreaOfCircle {
+                constructor(raduis, height) {
+                    super(raduis);
+                    this.raduis = raduis;
+                    this.height = height;
+                    this.circle = super.getArea();
+                }
+                getAreaOfCylinder() {
+                    return (2 * 3.1415 * this.raduis * this.height) + (2 * this.circle);
+                }
+            }
+
+            let cylinder = new AreaOfCylinder(10, 10);
+            let ans = cylinder.getAreaOfCylinder();
+            console.log(cylinder.getAreaOfCylinder())
+        </script>
+    </body>
+</html>

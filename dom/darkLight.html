@@ -1,44 +1,76 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 2rem;
-        }
-    </style>
-</head>
-<body>
-    
-    <div class="h1">
-        Light Mode
-    </div>
-    <div class="img">
-        <svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="sun" d="M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0" fill="yellow"/>
-        </svg>
-    </div>        
-    
-    <script>
-        let sun = document.querySelector(".sun")
-        let img = document.querySelector(".img")
-        let h1 = document.querySelector(".h1")
-        let toggle = true; // light -> true, dark -> false 
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            * {
+                transition: all 0.5s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="h1">Light Mode</div>
+        <div class="img">
+            <svg
+                width="111"
+                height="111"
+                viewBox="0 0 111 111"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    class="sun"
+                    d="M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0"
+                    fill="yellow"
+                />
+            </svg>
+        </div>
 
-        img.addEventListener("click", () => {
-            toggle = !toggle;
-            h1.innerHTML = "Dark Mode "
-        })
-    </script>
-</body>
-</html>
+        <script>
+            let body = document.querySelector("body");
+            let img = document.querySelector(".sun");
+            let h1 = document.querySelector(".h1");
+            let toggle = true; // light -> true, dark -> false
+            let svg = document.querySelector(".img svg");
+            let sunPath =
+                "M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0";
+            let moonPath =
+                "M25 55.5C25 86.1518 55.5 111 55.5 111C24.8482 111 -7.62939e-06 86.1518 -7.62939e-06 55.5C-7.62939e-06 24.8482 24.8482 0 55.5 0C55.5 0 25 24.8482 25 55.5Z";
+
+            img.addEventListener("click", () => {
+                if (toggle) {
+                    h1.innerHTML = "Dark Mode ";
+                    body.style.backgroundColor = "black";
+                    body.style.color = "white";
+                    img.setAttribute("d", moonPath);
+
+                    // to change background-color of svg
+                    img.setAttribute("fill", "white");
+                    svg.style.transfrom = "rotate(0deg)";
+                } else {
+                    h1.innerHTML = "Light Mode ";
+                    body.style.backgroundColor = "white";
+                    body.style.color = "black";
+                    img.setAttribute("d", sunPath);
+                    svg.style.transfrom = "rotate(360deg)";
+
+                    img.setAttribute("fill", "yellow");
+                }
+                toggle = !toggle;
+            });
+        </script>
+    </body>
+</html> -->
 
 <!-- * sun -->
 <!-- <svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +81,72 @@
 <!-- <svg width="56" height="111" viewBox="0 0 56 111" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M25 55.5C25 86.1518 55.5 111 55.5 111C24.8482 111 -7.62939e-06 86.1518 -7.62939e-06 55.5C-7.62939e-06 24.8482 24.8482 0 55.5 0C55.5 0 25 24.8482 25 55.5Z" fill="#333"/>
 </svg> -->
-    
-    
-    
- 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            * {
+                transition: all 1s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="h1">Light Mode</div>
+        <div class="img">
+            <svg
+                class="svg"
+                width="111"
+                height="111"
+                viewBox="0 0 111 111"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    class="path"
+                    d="M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0"
+                    fill="yellow"
+                />
+            </svg>
+        </div>
+
+        <script>
+            let body = document.querySelector("body")
+            let path = document.querySelector(".path");
+            let svg = document.querySelector(".svg")
+            let moonPath =
+                "M25 55.5C25 86.1518 55.5 111 55.5 111C24.8482 111 -7.62939e-06 86.1518 -7.62939e-06 55.5C-7.62939e-06 24.8482 24.8482 0 55.5 0C55.5 0 25 24.8482 25 55.5Z";
+            let sunPath =
+                "M 55.5,0 A 55.5,55.5 0 1,0 55.5,111 A 55.5,55.5 0 1,0 55.5,0";
+            let sunBackground = "yellow";
+            let moonBackground = "white"
+
+            let toggle = true; // true -> light, false -> dark
+            svg.addEventListener("click", () => {
+                if (toggle == true) {
+                    path.setAttribute("d", moonPath);
+                    body.style.backgroundColor = "#333"
+                    body.style.color = "#fff"
+                } else {
+                    path.setAttribute("d", sunPath);
+                    body.style.backgroundColor = "#fff"
+                    body.style.color = "#333"
+                    
+                }
+
+                toggle = !toggle
+            })
+        </script>
+    </body>
+</html>
