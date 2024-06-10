@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr = [
+            {name: "s1", marks: 10},
+            {name: "s2", marks: 20},
+            {name: "s3", marks: 23},
+            {name: "s4", marks: 43},
+            {name: "s5", marks: 10},
+            {name: "s6", marks: 32},
+            {name: "s7", marks: 10},
+            {name: "s8", marks: 12},
+            {name: "s9", marks: 22},
+            {name: "s10", marks: 52},
+        ];
+        let pass = arr.map(function(ele) {
+            if (ele.marks > 10) {
+                ele.isPass = true;
+                return ele ;
+            } else {
+                ele.isPass = false;
+                return ele;
+            }
+        });
+
+        console.log(arr)
+        console.log(pass)
+    </script>
+</body>
+</html>

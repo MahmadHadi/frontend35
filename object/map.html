@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            arr = [
+                1, 10, 10, 10, 11, 12, 12, 12, 13, 14, 14, 15, 17, 17, 18, 19,
+                19, 19
+            ];
+
+            let arr2 = arr.map(function (num, index, array) {
+                console.log("array = ", array[0]);
+                console.log("index = ", index);
+                console.log(this);
+                return num * num * num;
+            }, 12);
+            console.log(arr
+            console.log(arr2);
+        </script>
+    </body>
+</html>
