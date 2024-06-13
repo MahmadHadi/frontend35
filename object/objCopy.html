@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            name: "hadi",
+            rnum: 39,
+        }
+
+        let obj2 = obj1;
+        console.log(obj1, obj2)
+        
+        obj2.marks = 101
+
+        console.log(obj1, obj2)
+
+        let arr1 = [1, 2, 3]
+        let arr2 = arr1
+
+        console.log(arr1, arr2)
+        
+        arr2[0] = 101
+        
+        console.log(arr1, arr2)
+        
+        arr2[3] = 404
+        
+        console.log(arr1, arr2)
+    </script>
+</body>
+</html>

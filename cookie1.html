@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="./cookie.js"></script>
+        <script>
+            document.cookie =
+                "name = Hadi Nayani; expires = mon, 15 Dec 2020 12:00:00 UTC; path = /";
+            console.log(document.cookie);
+
+            setCookie("hadi", "nayani", 1);
+            console.log(document.cookie);
+            
+            setCookie("hadi", "HADI", 1)
+            console.log(document.cookie);
+
+            console.log(getCookie("hadi"))
+        </script>
+    </body>
+</html>

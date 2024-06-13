@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let obj1 = {
+                name: "hadi",
+                rnum: 39,
+            };
+            let obj2 = {};
+            for (key in obj1) {
+                obj2[key] = obj1[key];
+            }
+            console.log("obj1 = ", obj1, "obj2 = ", obj2);
+            obj2.marks = 101;
+            console.log("obj1 = ", obj1, "obj2 = ", obj2);
+
+            obj1.marks = 10101;
+        </script>
+    </body>
+</html>
