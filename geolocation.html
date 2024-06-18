@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p></p>
+        <p id="demo">Click the button to get your coordinates:</p>
+        <input onclick="getLocation()" type="button" value="get location" />
+
+        <script>
+            let body = document.querySelector("body");
+
+            var mylocation = document.getElementById("demo");
+            function getLocation() {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            function showPosition(location) {
+                // console.log(location);
+                mylocation.innerHTML =
+                    "Latitude = " +
+                    location.coords.latitude +
+                    "<br> Longitude = " +
+                    location.coords.longitude;
+
+                setTimeout(() => {
+                    body.innerHTML += `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.5828254356966!2d${location.coords.longitude}!3d${location.coords.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f50bd413c0735%3A0x1eb2663b0ce520a!2sDomino&#39;s%20Pizza!5e0!3m2!1sen!2sin!4v1718368945703!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+
+                    body.innerHTML += `<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=${location.coords.longitude}%2C${location.coords.latitude}%2C${location.coords.longitude}%2C${location.coords.latitude}&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/${location.coords.latitude}/${location.coords.longitude}">View Larger Map</a></small>`;
+                }, 2000);
+            }
+        </script>
+    </body>
+</html>

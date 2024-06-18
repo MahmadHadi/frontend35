@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .page-1,
+        .page-2 {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+
+            animation-name: change-clr;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            /* animation-timing-function: ease-in-out; */
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes change-clr {
+            from {
+                background-color: crimson;
+                border-radius: 0;
+            } 
+            to {
+                background-color: royalblue;
+                border-radius: 50%;
+            }
+        }
+    </style>
+    <div class="page-1">
+        <div class="box"></div>
+    </div>
+    
+    <hr>
+
+    <style>
+        .page-2 {
+            position: relative;
+        }
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100px;
+            background: lightblue;
+            /* transition: all 2s linear 1s; */
+            animation: box-anime 5s infinite alternate-reverse cubic-bezier(0.29, 1.22, 1,-0.15);
+            
+        }
+
+        @keyframes box-anime {
+            20% {
+                top: 0;
+                left: 95%;
+            }
+            60% {
+                left: 95%;
+                top: 90%;
+            }
+            80% {
+                top: 90%;
+                left: 0%;
+            }
+        }
+    </style>
+    <div class="page-2">
+        <div class="circle"></div>
+    </div>
+
+    <input type="range" name="" id="">
+</body>
+</html>
